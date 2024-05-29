@@ -1,0 +1,29 @@
+若有定义int i;float x;为使i等于1，x等于6.6666，当执行“scanf(“%3d%f”,&i,&x);”时，正确的输入应该是：
+
+A
+1，6.6666 回车
+
+B
+16.6666 回车
+
+C
+001 6.6666 回车
+
+D
+i=001,x=6.6666 回车
+正确答案：C
+输入为C项时，系统从空格处分割，001中取3个列宽值给i，使得i的值为1，6.6666赋值给x。因为scanf（“格式控制字符串”，输入项列表）格式控制字符串中带%的就是格式控制说明，比如%f是输入float型数据，%3d输入列宽为3的int数据，其他为普通字符需要原样输入。
+
+
+"My salary was increased by 15%!"
+下列哪个选项可以准确的显示出上述语句？
+A
+printf("\"My salary was increased by 15/%\!\"\n");
+B
+printf("My salary was increased by 15%!\n");
+C
+printf("My salary was increased by 15'%'!\n");
+D
+printf("\"My salary was increased by 15%%!\"\n");
+正确答案：D
+因为%代表输出格式控制，所以要输出百分号必须用%%
